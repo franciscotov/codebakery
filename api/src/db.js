@@ -11,19 +11,16 @@ if(process.env.DATABASE_URL){
   sequelize = new Sequelize(URLDB,{
     logging: false, // set to console.log to see the raw SQL queries
     native: false, // lets Sequelize know we can use pg-native for ~30% more speed
-    dialect: "postgres",
-    protocol: "postgres",
+    dialect: "mysql",
+    protocol: "mysql",
     dialectOptions: {
       native: true,
-      ssl: {
-        require: true,
-        rejectUnauthorized: false
-        }
+      ssl: false
       }
     })
 }else{
   sequelize = new Sequelize(
-    `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/development`,
+    `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/postgres`,
     {
       logging: false, // set to 
       native: false, // lets Sequelize know we can use pg-native for ~30% more speed
