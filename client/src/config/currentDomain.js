@@ -1,6 +1,6 @@
 export function getCurrentDomainApi(){
     if(process.env.NODE_ENV === "production"){
-        return "https://apicodebakery.herokuapp.com"
+        return "https://codebakery-api.onrender.com"
     }
     return `http://localhost:3001`
 }
