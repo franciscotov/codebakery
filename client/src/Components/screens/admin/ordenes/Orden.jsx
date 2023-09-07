@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import BootBox from "react-bootbox";
 
-import "rsuite/lib/styles/index.less";
+// import "rsuite/lib/styles/index.less";
 import { HiOutlineDocumentSearch } from "react-icons/hi";
 import { Link } from "react-router-dom";
 import MODIFY_ORDER_STATUS from "../../../../Apollo/mutations/modifyOrderStatus";
